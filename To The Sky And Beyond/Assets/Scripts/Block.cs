@@ -3,6 +3,8 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     public float gravityScaleFactor = 20f;
+    public int score;
+    
 
     void Start()
     {
@@ -15,6 +17,7 @@ public class Block : MonoBehaviour
         if(transform.position.y < -10)
         {
             Destroy(gameObject);
-        }
+            score++;        }
+               
     }
 }

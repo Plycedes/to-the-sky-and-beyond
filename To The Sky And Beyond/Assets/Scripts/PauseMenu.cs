@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseButton()  //To give the pause button power to pause
     {
-        GameIsPaused = true;
+        GameIsPaused = true;        
     }
 
     private void Update()  //Logic to pause or resume
@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        FindObjectOfType<AudioManager>().Play("menuClick");
     }
 
     public void Resume()
@@ -38,16 +39,19 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        FindObjectOfType<AudioManager>().Play("menuClick");
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        FindObjectOfType<AudioManager>().Play("menuClick");
     }
 
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Exit");
+        FindObjectOfType<AudioManager>().Play("menuClick");
     }
 }

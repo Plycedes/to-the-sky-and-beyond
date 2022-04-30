@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
-    public float timeStoneEffect = 10f;
+    public float timeStoneEffect = 10f;    
 
     public void EndGame()
     {

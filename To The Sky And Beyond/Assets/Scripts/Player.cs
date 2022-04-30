@@ -27,6 +27,11 @@ public class Player : MonoBehaviour
         rb.MovePosition(newPosition);
     }
 
+    void OnCollisionEnter2D()
+    {
+        FindObjectOfType<GameManagement>().EndGame();
+    }
+
     public void Left()
     {
         rb.AddForce(transform.right * sideWaysForce2, ForceMode2D.Force);

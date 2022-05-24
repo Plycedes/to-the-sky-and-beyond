@@ -1224,17 +1224,22 @@ PrefabInstance:
     - target: {fileID: 2725477549899127670, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2725477549899127670, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
         type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 8493470095c2da44fa01c13ccbbc21f6, type: 3}
+      objectReference: {fileID: 8300000, guid: 0ab6d29f4bbea4246a32b9e078798a50, type: 3}
+    - target: {fileID: 2725477549899127670, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
+        type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2725477549899127670, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
         type: 3}
       propertyPath: sounds.Array.data[1].name
-      value: menuOpen
+      value: bgMusic
       objectReference: {fileID: 0}
     - target: {fileID: 2725477549899127670, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
         type: 3}
@@ -1244,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 2725477549899127670, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
         type: 3}
       propertyPath: sounds.Array.data[1].volume
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2725477549899127671, guid: 4f68c8c35beafce41ad8dcc6e08b5d81,
         type: 3}

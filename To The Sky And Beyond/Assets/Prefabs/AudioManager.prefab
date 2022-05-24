@@ -50,3 +50,9 @@ MonoBehaviour:
     pitch: 1.02
     loop: 0
     source: {fileID: 0}
+  - name: bgMusic
+    clip: {fileID: 8300000, guid: 0ab6d29f4bbea4246a32b9e078798a50, type: 3}
+    volume: 1
+    pitch: 1.02
+    loop: 1
+    source: {fileID: 0}

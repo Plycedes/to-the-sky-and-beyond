@@ -1,41 +1,66 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class PlayerMobile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class PlayerMobile : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-    public float speed = 15f;
-    public float mapWidth = 5f;
-    public float sideWaysForce = 10f;
-    public float sideWaysForce2 = -10f;
-
-    bool pressed = false;
+    private bool moveLeft;
+    private bool moveRight;
+    private float horizontalMove;
+    public float speed = 5;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        moveLeft = false;
+        moveRight = false;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void PointerDownLeft()
     {
-        pressed = true;
+        moveLeft = true;
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void PointerUpLeft()
     {
-        pressed = false;
+        moveLeft = false;
     }
 
-    void Update()
+    public void PointerDownRight()
     {
-        if (pressed)
-            MoveLeft();
+        moveRight = true;
     }
 
-    public void MoveLeft()
+    public void PointerUpRight()
     {
-        
+        moveRight= false;
+    }
+
+    private void Update()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
+    {
+        if (moveLeft)
+        {
+            horizontalMove = -speed;
+        }
+        else if (moveRight)
+        {
+            horizontalMove = speed;
+        }
+        else
+        {
+            horizontalMove = 0;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
     }
 
     void OnCollisionEnter2D()
